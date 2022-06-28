@@ -1,0 +1,12 @@
+//
+//  Localizable.swift
+//  AMS Job App
+//
+//  Created by Philipp Gewinner on 28.11.20.
+//
+
+/**
+ *  String "Translation" / Dictionary for German
+ */
+
+"test_string" = "HALLO";
