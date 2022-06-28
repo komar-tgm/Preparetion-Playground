@@ -2,18 +2,11 @@
 //  BluetoothService.swift
 //  PlainTest
 //
-//  Created by Karim Omar on 27.06.22.
+//  Created by Karim Omar on 28.06.22.
 //
 
 import Foundation
-import CoreBluetooth
-
-extension ViewController: CBCentralManagerDelegate {
-    func centralManagerDidUpdateState(_ central: CBCentralManager) {
-        
-    }
-}
-
-extension ViewController: CBPeripheralDelegate {
-    
+protocol BluetoothService: AnyObject {
+    func initCentralManager()
+    func cleanClose()
 }

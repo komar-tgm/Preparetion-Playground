@@ -8,21 +8,30 @@
 import Foundation
 import UIKit
 import Charts
+import CoreBluetooth
+import Resolver
 
 class ChartViewController: UIViewController {
+    
+    var centralManager: CBCentralManager?
 
+    var array = [CBPeripheral]()
+    
     let chartView = LineChartView()
         
     var dataEntries = [ChartDataEntry]()
     
     var xValue: Double = 8
 
+    @Injected var bluetoothService: BluetoothService
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = R.color.button()
         setupViews()
         setupInitialDataEntries()
         setupChartData()
+        self.bluetoothService.initCentralManager()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,6 +39,12 @@ class ChartViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(didUpdatedChartView), userInfo: nil, repeats: true)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.bluetoothService.cleanClose()
+    }
+    
+
     @objc func didUpdatedChartView() {
         let newDataEntry = ChartDataEntry(x: xValue,
                                           y: Double.random(in: 0...50))

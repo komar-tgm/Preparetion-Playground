@@ -29,7 +29,7 @@
 		8AA050D12869774900228DDE /* PreferenceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA050CE2869774900228DDE /* PreferenceRepository.swift */; };
 		8AA050D22869774900228DDE /* LocalPreferenceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA050D02869774900228DDE /* LocalPreferenceRepository.swift */; };
 		8AA050D52869944000228DDE /* RxRealm in Frameworks */ = {isa = PBXBuildFile; productRef = 8AA050D42869944000228DDE /* RxRealm */; };
-		8AA050D82869A56C00228DDE /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA050D72869A56C00228DDE /* BluetoothService.swift */; };
+		8AA050D82869A56C00228DDE /* LocalBluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA050D72869A56C00228DDE /* LocalBluetoothService.swift */; };
 		8AA8F25E28570E9A0066B2B3 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA8F25D28570E9A0066B2B3 /* R.generated.swift */; };
 		8AA8F26128570F1A0066B2B3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AA8F25F28570EFC0066B2B3 /* Localizable.strings */; };
 		8AA8F26428570FF60066B2B3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8AA8F26328570FF60066B2B3 /* SnapKit */; };
@@ -42,6 +42,7 @@
 		8AAE73D82864817900DC81CC /* Withable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAE73D72864817900DC81CC /* Withable.swift */; };
 		8AAE73DB28648B6D00DC81CC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8AAE73DA28648B6D00DC81CC /* Realm */; };
 		8AAE73DD28648B6D00DC81CC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8AAE73DC28648B6D00DC81CC /* RealmSwift */; };
+		8ABEF079286B2350002F776D /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABEF078286B2350002F776D /* BluetoothService.swift */; };
 		8ACB1863285864D400054E2D /* HelloWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB1862285864D400054E2D /* HelloWorld.cpp */; };
 		8ACB18662858657000054E2D /* HelloWorldWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8ACB18652858657000054E2D /* HelloWorldWrapper.mm */; };
 /* End PBXBuildFile section */
@@ -90,12 +91,13 @@
 		8AA043E02865A3460027BEBB /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		8AA050CE2869774900228DDE /* PreferenceRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceRepository.swift; sourceTree = "<group>"; };
 		8AA050D02869774900228DDE /* LocalPreferenceRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalPreferenceRepository.swift; sourceTree = "<group>"; };
-		8AA050D72869A56C00228DDE /* BluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
+		8AA050D72869A56C00228DDE /* LocalBluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBluetoothService.swift; sourceTree = "<group>"; };
 		8AA8F25D28570E9A0066B2B3 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		8AA8F25F28570EFC0066B2B3 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8AAE73D22864681700DC81CC /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		8AAE73D42864806600DC81CC /* DatabaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseViewController.swift; sourceTree = "<group>"; };
 		8AAE73D72864817900DC81CC /* Withable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Withable.swift; sourceTree = "<group>"; };
+		8ABEF078286B2350002F776D /* BluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
 		8ACB1860285864D400054E2D /* PlainTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlainTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		8ACB1861285864D400054E2D /* HelloWorld.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HelloWorld.hpp; sourceTree = "<group>"; };
 		8ACB1862285864D400054E2D /* HelloWorld.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorld.cpp; sourceTree = "<group>"; };
@@ -307,7 +309,8 @@
 		8AA050D62869A55600228DDE /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				8AA050D72869A56C00228DDE /* BluetoothService.swift */,
+				8AA050D72869A56C00228DDE /* LocalBluetoothService.swift */,
+				8ABEF078286B2350002F776D /* BluetoothService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -627,13 +630,14 @@
 				8AA043DF28659F150027BEBB /* Injection.swift in Sources */,
 				8AA050D22869774900228DDE /* LocalPreferenceRepository.swift in Sources */,
 				8A6BEDAB28530EDC00C2A3BB /* ViewController.swift in Sources */,
+				8ABEF079286B2350002F776D /* BluetoothService.swift in Sources */,
 				8AAE73D82864817900DC81CC /* Withable.swift in Sources */,
 				8A6BEDA728530EDC00C2A3BB /* AppDelegate.swift in Sources */,
 				8AA043CF286591000027BEBB /* LocalDataRepository.swift in Sources */,
 				8AA8F25E28570E9A0066B2B3 /* R.generated.swift in Sources */,
 				8AA043D928659BC20027BEBB /* DatabaseViewModel.swift in Sources */,
 				8AA043D2286592A20027BEBB /* AppContext.swift in Sources */,
-				8AA050D82869A56C00228DDE /* BluetoothService.swift in Sources */,
+				8AA050D82869A56C00228DDE /* LocalBluetoothService.swift in Sources */,
 				8AA043D4286592D10027BEBB /* AppDatabase.swift in Sources */,
 				8ACB18662858657000054E2D /* HelloWorldWrapper.mm in Sources */,
 				8AA050D12869774900228DDE /* PreferenceRepository.swift in Sources */,
@@ -740,7 +744,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -795,7 +799,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -814,6 +818,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5HH5B6KRZ4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlainTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -845,6 +850,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5HH5B6KRZ4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlainTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
